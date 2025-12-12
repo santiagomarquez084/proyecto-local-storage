@@ -4,7 +4,7 @@
 if (location.pathname.includes("inicio.html")) {
     const user = JSON.parse(localStorage.getItem("usuarioActivo"));
     if (!user) location.href = "index.html";
-    document.getElementById("saludo").textContent = "Bienvenido, " + user.nombre;
+    document.getElementById("saludo").textContent = "Bienvenidos a la mejor pagina de GYM";
 }
 
 // ==============================
@@ -25,6 +25,7 @@ function login() {
     } else {
         error.textContent = "Usuario o contraseña incorrectos";
     }
+    event.preventDefault();
 }
 
 // ==============================
@@ -215,8 +216,7 @@ let usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
 if (!usuarioActivo) {
     location.href = "index.html";
 } else {
-    document.getElementById("saludo").textContent =
-        "Bienvenido, " + usuarioActivo.nombres + " " + usuarioActivo.apellidos;
+    document.getElementById("saludo").textContent = "Bienvenidos a la mejor pagina de GYM";
 }
 
 // =============================
